@@ -8,7 +8,7 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import ProjectCard from "@/components/project-card"
 import MobileMenu from "@/components/mobile-menu"
-import projects from "../components/projets"
+import projects from "../components/dataProjets"
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState("home")
@@ -571,4 +571,3 @@ export default function Home() {
     </div>
   )
 }
-
