@@ -295,7 +295,7 @@ export default function Home() {
                           Compétences techniques
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {["React", "Python", "PHP", "JavaScript", "MySQL", "React Native", "RedwoodJS"].map((skill) => (
+                          {["React", "Python", "PHP", "JavaScript", "MySQL", "React Native", "RedwoodJS", "git"].map((skill) => (
                             <span
                               key={skill}
                               className="px-3 py-1.5 text-sm rounded-full bg-primary/15 text-primary border border-primary/20 hover:bg-primary/25 transition-colors"
