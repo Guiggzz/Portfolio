@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Github, Linkedin, Mail, ExternalLink, Menu, X, Download, FileDown, Navigation2 } from "lucide-react"
+import { Github, Linkedin, Mail, ExternalLink, Menu, X, Download, FileDown, Navigation2, GraduationCap, Code, Users, Briefcase, Heart } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
@@ -200,8 +200,8 @@ export default function Home() {
         </section>
 
         {/* About Section */}
-        <section id="about" className="min-h-screen flex items-center py-20">
-          <div className="container mx-auto px-4">
+        <section id="about" className="py-20 lg:py-32">
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
             <motion.div
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
@@ -215,162 +215,206 @@ export default function Home() {
               <div className="w-20 h-1 bg-primary mx-auto" />
             </motion.div>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 relative">
+              {/* Decorative element */}
               <motion.div
-                initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8 }}
+                initial={{ opacity: 0, scale: 0.8 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 1 }}
                 viewport={{ once: true }}
-                className="relative"
-              >
-                <div className="relative w-full h-[400px] rounded-2xl overflow-hidden border border-primary/20">
-                  <Image
-                    src="/placeholder.svg?height=800&width=600"
-                    alt="About Guillaume Breon"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="absolute -bottom-5 -right-5 w-32 h-32 bg-primary/20 rounded-full blur-3xl" />
-              </motion.div>
+                className="absolute -z-10 top-10 right-10 lg:right-40 w-64 h-64 bg-primary/10 rounded-full blur-3xl"
+              />
 
+              {/* Main content */}
               <motion.div
-                initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
                 viewport={{ once: true }}
-                className="space-y-6"
+                className="lg:col-span-12 space-y-8"
               >
-                <h3 className="text-2xl font-bold">
-                  Étudiant en <span className="text-primary">développement logiciel</span>
-                </h3>
-                <p className="text-gray-400">
-                  Actuellement en deuxième année de Bachelor en développement logiciel et de BTS SIO à l'EPSI Toulouse,
-                  j'y étudie les fondamentaux du développement web et applicatif, ainsi que le droit, l'économie, le
-                  management, le marketing et la communication.
-                </p>
+                <div className="bg-black/30 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-primary/20 shadow-lg">
+                  <h3 className="text-2xl md:text-3xl font-bold mb-4">
+                    Étudiant en <span className="text-primary">développement logiciel</span>
+                  </h3>
+                  <p className="text-gray-300 md:text-lg">
+                    Actuellement en deuxième année de Bachelor en développement logiciel et de BTS SIO à l'EPSI Toulouse,
+                    j'y étudie les fondamentaux du développement web et applicatif, ainsi que le droit, l'économie, le
+                    management, le marketing et la communication.
+                  </p>
+                </div>
 
-                <div className="space-y-4">
-                  <h4 className="font-medium text-xl">Formation</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <h5 className="font-medium">Bachelor développement logiciel</h5>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {/* Formation column */}
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="bg-black/30 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-primary/20 shadow-lg h-full"
+                  >
+                    <h4 className="font-bold text-xl md:text-2xl mb-6 flex items-center">
+                      <GraduationCap className="mr-3 h-6 w-6 text-primary" />
+                      Formation
+                    </h4>
+                    <div className="space-y-6">
+                      <div className="relative pl-6 border-l-2 border-primary/30 pb-6">
+                        <div className="absolute -left-2 top-0 h-4 w-4 rounded-full bg-primary" />
+                        <h5 className="font-medium text-lg">Bachelor développement logiciel</h5>
                         <p className="text-sm text-gray-400">EPSI Toulouse</p>
+                        <span className="text-sm font-medium text-primary mt-1 block">En cours - 2026</span>
                       </div>
-                      <span className="text-sm text-primary">En cours - 2026</span>
-                    </div>
-                    <div className="flex justify-between items-center">
-                      <div>
-                        <h5 className="font-medium">BTS SIO SLAM</h5>
+
+                      <div className="relative pl-6 border-l-2 border-primary/30 pb-6">
+                        <div className="absolute -left-2 top-0 h-4 w-4 rounded-full bg-primary" />
+                        <h5 className="font-medium text-lg">BTS SIO SLAM</h5>
                         <p className="text-sm text-gray-400">Solutions Logicielles et Applications Métiers</p>
+                        <span className="text-sm font-medium text-primary mt-1 block">En cours - 2025</span>
                       </div>
-                      <span className="text-sm text-primary">En cours - 2025</span>
+
+                      <div className="relative pl-6">
+                        <div className="absolute -left-2 top-0 h-4 w-4 rounded-full bg-primary" />
+                        <h5 className="font-medium text-lg">Baccalauréat Général</h5>
+                        <span className="text-sm font-medium text-primary mt-1 block">2022</span>
+                      </div>
                     </div>
-                    <div className="flex justify-between items-center">
+                  </motion.div>
+
+                  {/* Skills column */}
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: 0.3 }}
+                    viewport={{ once: true }}
+                    className="bg-black/30 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-primary/20 shadow-lg h-full flex flex-col"
+                  >
+                    <div className="space-y-6 flex-grow">
                       <div>
-                        <h5 className="font-medium">Baccalauréat Général</h5>
+                        <h4 className="font-bold text-xl md:text-2xl mb-4 flex items-center">
+                          <Code className="mr-3 h-6 w-6 text-primary" />
+                          Compétences techniques
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {["React", "Python", "PHP", "JavaScript", "MySQL", "React Native", "RedwoodJS"].map((skill) => (
+                            <span
+                              key={skill}
+                              className="px-3 py-1.5 text-sm rounded-full bg-primary/15 text-primary border border-primary/20 hover:bg-primary/25 transition-colors"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                      <span className="text-sm text-primary">2022</span>
+
+                      <div>
+                        <h4 className="font-bold text-xl md:text-2xl mb-4 flex items-center">
+                          <Users className="mr-3 h-6 w-6 text-primary" />
+                          Soft skills
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {["Esprit d'équipe", "Sérieux", "Polyvalent", "Adaptabilité"].map((skill) => (
+                            <span
+                              key={skill}
+                              className="px-3 py-1.5 text-sm rounded-full bg-primary/15 text-primary border border-primary/20 hover:bg-primary/25 transition-colors"
+                            >
+                              {skill}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
+
+                      <div>
+                        <h4 className="font-bold text-xl md:text-2xl mb-4 flex items-center">
+                          <Heart className="mr-3 h-6 w-6 text-primary" />
+                          Loisirs
+                        </h4>
+                        <div className="flex flex-wrap gap-2">
+                          {["Scoutisme (8 ans)", "Taekwondo (8 ans)", "Hockey sur glace (7 ans)"].map((hobby) => (
+                            <span
+                              key={hobby}
+                              className="px-3 py-1.5 text-sm rounded-full bg-primary/15 text-primary border border-primary/20 hover:bg-primary/25 transition-colors"
+                            >
+                              {hobby}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  </div>
+
+                    <Button className="group mt-8 w-full sm:w-auto flex items-center justify-center" onClick={handleDownloadCV}>
+                      Télécharger mon CV complet
+                      <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
+                    </Button>
+                  </motion.div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 pt-4">
-                  <div className="space-y-2">
-                    <h4 className="font-medium">Compétences techniques</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {["React", "Python", "PHP", "JavaScript", "MySQL", "React Native"].map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
-                        >
-                          {skill}
+                {/* Experience Section */}
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8 }}
+                  viewport={{ once: true }}
+                  className="mt-12"
+                >
+                  <h3 className="text-2xl md:text-3xl font-bold mb-8 flex items-center">
+                    <Briefcase className="mr-3 h-6 w-6 text-primary" />
+                    Expériences <span className="text-primary ml-2">professionnelles</span>
+                  </h3>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="bg-black/30 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-primary/20 shadow-lg hover:border-primary/40 transition-colors">
+                      <div className="flex flex-col sm:flex-row justify-between items-start mb-4">
+                        <div>
+                          <h4 className="text-xl font-bold">Stage développeur applications web</h4>
+                          <p className="text-primary font-medium">E-konik</p>
+                        </div>
+                        <span className="text-sm bg-primary/20 text-primary px-3 py-1 rounded-full mt-2 sm:mt-0">
+                          Janvier à Mars 2025
                         </span>
-                      ))}
+                      </div>
+                      <p className="text-gray-300">
+                        Mon stage consistait à créer un poc d'un application web dans la seconde main.
+                      </p>
+                      <div className="mt-4 pt-4 border-t border-gray-700">
+                        <p className="text-sm text-gray-400 font-medium">Technologies utilisées :</p>
+                        <div className="flex flex-wrap gap-2 mt-2">
+                          {["RedwoodJS", "React", "Prisma", "GraphQL", "NodeJS"].map((tech) => (
+                            <span key={tech} className="px-2 py-1 text-xs bg-black/40 rounded-md border border-gray-700">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-medium">Soft skills</h4>
-                    <div className="flex flex-wrap gap-2">
-                      {["Esprit d'équipe", "Sérieux", "Polyvalent", "Adaptabilité"].map((skill) => (
-                        <span
-                          key={skill}
-                          className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
-                        >
-                          {skill}
+
+                    <div className="bg-black/30 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-primary/20 shadow-lg hover:border-primary/40 transition-colors">
+                      <div className="flex flex-col sm:flex-row justify-between items-start mb-4">
+                        <div>
+                          <h4 className="text-xl font-bold">Stage développeur web</h4>
+                          <p className="text-primary font-medium">Agence Gerbail et Audirac</p>
+                        </div>
+                        <span className="text-sm bg-primary/20 text-primary px-3 py-1 rounded-full mt-2 sm:mt-0">
+                          Avril à Juin 2024
                         </span>
-                      ))}
+                      </div>
+                      <p className="text-gray-300">
+                        Mon stage consistait à créer un site web pour présenter l'entreprise et ses différents projets.
+                      </p>
+                      <div className="mt-4 pt-4 border-t border-gray-700">
+                        <p className="text-sm text-gray-400 font-medium">Technologies utilisées :</p>
+                        <div className="flex flex-wrap gap-2 mt-2">
+                          {["HTML", "CSS", "PHP"].map((tech) => (
+                            <span key={tech} className="px-2 py-1 text-xs bg-black/40 rounded-md border border-gray-700">
+                              {tech}
+                            </span>
+                          ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                <div className="space-y-2 pt-2">
-                  <h4 className="font-medium">Loisirs</h4>
-                  <div className="flex flex-wrap gap-2">
-                    {["Scoutisme (8 ans)", "Taekwondo (8 ans)", "Hockey sur glace (7 ans)"].map((hobby) => (
-                      <span
-                        key={hobby}
-                        className="px-3 py-1 text-xs rounded-full bg-primary/10 text-primary border border-primary/20"
-                      >
-                        {hobby}
-                      </span>
-                    ))}
-                  </div>
-                </div>
-
-                <Button className="group mt-4" onClick={handleDownloadCV}>
-                  Télécharger mon CV complet
-                  <Download className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-                </Button>
+                </motion.div>
               </motion.div>
             </div>
-
-            {/* Experience Section */}
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="mt-20"
-            >
-              <h3 className="text-2xl font-bold mb-8">
-                Expériences <span className="text-primary">professionnelles</span>
-              </h3>
-
-              <div className="space-y-8">
-                <div className="bg-black/50 backdrop-blur-sm p-6 rounded-xl border border-primary/20">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h4 className="text-xl font-bold">Stage développeur applications web</h4>
-                      <p className="text-primary">E-konik</p>
-                    </div>
-                    <span className="text-sm text-gray-400">Janvier à Mars 2025</span>
-                  </div>
-                  <p className="text-gray-400">
-                    Mon stage consistait à créer un poc d'un application web dans la seconde main.
-                    <br />
-                    Technologies utilisées : RedwoodJS(React, Prisma, Graphql) et NodeJS.
-                  </p>
-                </div></div>
-
-              <div className="space-y-8">
-                <div className="bg-black/50 backdrop-blur-sm p-6 rounded-xl border border-primary/20">
-                  <div className="flex justify-between items-start mb-4">
-                    <div>
-                      <h4 className="text-xl font-bold">Stage développeur web</h4>
-                      <p className="text-primary">Agence Gerbail et Audirac</p>
-                    </div>
-                    <span className="text-sm text-gray-400">Avril à Juin 2024</span>
-                  </div>
-                  <p className="text-gray-400">
-                    Mon stage consistait à créer un site web pour présenter l'entreprise et ses différents projets.
-                    <br />
-                    Technologies utilisées : HTML/CSS et PHP.
-                  </p>
-                </div>
-              </div>
-            </motion.div>
           </div>
         </section>
 
