@@ -38,23 +38,16 @@ export default function Home() {
 
 
   const handleDownloadCV = () => {
-    // Create a link element
     const link = document.createElement("a")
-    // Set the href to the CV file path
     link.href = "/CV_Guillaume_Breon.pdf"
-    // Set the download attribute with the desired filename
     link.download = "CV_Guillaume_Breon.pdf"
-    // Append the link to the document
     document.body.appendChild(link)
-    // Trigger the click event
     link.click()
-    // Remove the link from the document
     document.body.removeChild(link)
   }
 
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
-      {/* Background grid effect */}
       <div className="absolute inset-0 bg-[radial-gradient(rgba(50,50,50,0.3)_1px,transparent_1px)] bg-[length:30px_30px] opacity-30" />
 
       {/* Navigation */}
@@ -155,11 +148,6 @@ export default function Home() {
                   <Link href="https://www.linkedin.com/in/guillaume-breon-aa193b295/" target="_blank" rel="noopener noreferrer">
                     <Button variant="ghost" size="icon" className="rounded-full hover:bg-gray-800 hover:text-primary">
                       <Linkedin className="h-6 w-6" />
-                    </Button>
-                  </Link>
-                  <Link href="mailto:guillaume.breon@gmail.com">
-                    <Button variant="ghost" size="icon" className="rounded-full hover:bg-gray-800 hover:text-primary">
-                      <Mail className="h-6 w-6" />
                     </Button>
                   </Link>
                 </div>
@@ -488,22 +476,8 @@ export default function Home() {
 
                 <div className="space-y-4">
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Mail className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Email</h4>
-                      <p className="text-gray-400">guillaume.breon@gmail.com</p>
-                    </div>
                   </div>
                   <div className="flex items-center space-x-4">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-                      <Linkedin className="h-5 w-5 text-primary" />
-                    </div>
-                    <div>
-                      <h4 className="font-medium">Téléphone</h4>
-                      <p className="text-gray-400">07 75 71 59 96</p>
-                    </div>
                   </div>
                   <div className="flex items-center space-x-4">
                     <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">

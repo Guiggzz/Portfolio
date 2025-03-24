@@ -27,22 +27,12 @@ export default [
         features: [
             "Cryptage AES-256 avec dérivation de clé sécurisée",
             "Interface minimaliste et intuitive",
-            "Mode hors ligne fonctionnel",
             "Génération de liens partageables sécurisés",
-            "Auto-destruction des messages après lecture"
         ],
         technologies: [
-            "JavaScript vanilla", "Web Crypto API", "HTML5", "CSS3", "LocalStorage", "Responsive Design"
-        ],
-        challenges: [
-            "Implémentation d'algorithmes cryptographiques complexes en JavaScript pur",
-            "Création d'une expérience utilisateur intuitive pour un sujet technique",
-            "Optimisation des performances sur appareils mobiles",
-            "Gestion sécurisée des clés de chiffrement côté client"
+            "JavaScript vanilla", "HTML5", "Tailwind", "Responsive Design"
         ],
         outcomes: [
-            "Plus de 10 000 messages cryptés depuis le lancement",
-            "Zéro faille de sécurité détectée lors des audits",
             "Adoption par plusieurs entreprises pour la communication de données sensibles",
             "Temps de chiffrement moyen inférieur à 500ms même pour les longs messages"
         ]
@@ -50,10 +40,10 @@ export default [
     {
         id: 3,
         title: "Pokedex",
-        description: "Création d'un Pokedex en React en utilisant une API privé pour récupérer les informations des pokémons.",
+        description: "Création d'un Pokedex en React en utilisant une API privé pour récupérer les informations des pokémons. (en cours de développement)",
         longDescription: "Ce Pokedex interactif offre une encyclopédie complète des Pokémon avec une interface moderne et responsive. En exploitant une API propriétaire, l'application fournit des données détaillées sur chaque créature, incluant statistiques, évolutions, attaques et habitats. Les utilisateurs peuvent rechercher par nom, type ou région, et comparer les caractéristiques de différents Pokémon. Le design s'inspire des jeux originaux tout en apportant une touche contemporaine.",
         image: "/image.png?height=600&width=800",
-        tags: ["React", "API Integration"],
+        tags: ["React", "Axios", "TypeScript"],
         link: "",
         github: "",
         features: [
@@ -64,25 +54,13 @@ export default [
             "Mode combat simulé pour comparer les statistiques"
         ],
         technologies: [
-            "Python", "Pygame", "RESTful API", "JSON", "ASCII Art", "Terminal UI"
+            "React", "Axios", "TypeScript"
         ],
-        challenges: [
-            "Optimisation des requêtes API pour réduire les temps de chargement",
-            "Création d'une interface utilisateur riche dans un environnement terminal limité",
-            "Implémentation d'un système de cache intelligent pour les données fréquemment consultées",
-            "Gestion des limitations de l'API externe tout en maintenant la fluidité"
-        ],
-        outcomes: [
-            "Interface terminal innovante avec animations ASCII fluides",
-            "Temps de réponse moyen inférieur à 200ms malgré les contraintes techniques",
-            "Plus de 500 téléchargements sur GitHub",
-            "Intégration dans plusieurs projets éducatifs pour l'apprentissage de Python"
-        ]
     },
     {
         id: 4,
         title: "Jeu en Réalité Virtuelle",
-        description: "Jeu en réalité virtuelle réalisé lors d'un workshop inter-campus utilisant Unreal Engine 5.",
+        description: "Jeu en réalité virtuelle et 3ème personne réalisé lors d'un workshop inter-campus utilisant Unreal Engine 5.",
         longDescription: "Cette expérience immersive en réalité virtuelle plonge les joueurs dans un monde post-apocalyptique où ils doivent résoudre des énigmes environnementales pour survivre. Développé en 72 heures lors d'un workshop inter-campus intensif, le jeu exploite les capacités graphiques avancées d'Unreal Engine 5 avec le système Nanite pour des environnements ultra-détaillés et Lumen pour un éclairage dynamique photoréaliste. L'interaction physique avec l'environnement est au cœur du gameplay.",
         image: "/aAMV7s5uQqeDJaA69z1R5A.webp?height=600&width=800",
         tags: ["Unreal Engine 5", "VR", "BluePrint", "3D Modeling", "Game Design"],
@@ -90,25 +68,19 @@ export default [
         github: "",
         features: [
             "Environnements destructibles avec physique réaliste",
-            "Système de crafting intuitif en VR avec plus de 50 objets créables",
-            "Intelligence artificielle réactive adaptant la difficulté au joueur",
-            "Cycles jour/nuit dynamiques affectant le gameplay",
             "Support multi-plateforme (Oculus, Valve Index, HTC Vive)"
         ],
         technologies: [
-            "Unreal Engine 5", "Blueprints", "Nanite", "Lumen", "Chaos Physics", "Quixel Megascans", "Meta XR SDK"
+            "Unreal Engine 5", "Blueprints", "Blender"
         ],
         challenges: [
-            "Développement d'interactions naturelles en VR pour minimiser la cinétose",
-            "Optimisation des performances pour maintenir 90 FPS constant sur matériel grand public",
-            "Collaboration efficace entre 15 développeurs en temps limité",
+            "Optimisation des performances pour maintenir 60 FPS constant sur matériel grand public",
+            "Collaboration efficace entre 4 développeurs en temps limité",
             "Equilibrage entre qualité visuelle et fluidité de l'expérience VR"
         ],
         outcomes: [
-            "Premier prix au concours inter-campus de développement VR",
-            "Présentation du projet lors d'une conférence internationale sur la VR",
-            "Couverture médiatique dans trois magazines spécialisés",
-            "Proposition d'acquisition par un studio de développement indépendant"
+            "Premier prix au concours inter-campus",
+            "Présentation du projet lors de salon pour la présentation de l'école",
         ]
     },
     {
@@ -120,27 +92,9 @@ export default [
         tags: ["PHP", "MySQL"],
         link: "",
         github: "",
-        features: [
-            "Authentification sécurisée avec validation en deux étapes",
-            "Messagerie instantanée avec chiffrement de bout en bout",
-            "Système de groupes avec différents niveaux d'accès",
-            "Galeries multimédias avec stockage optimisé",
-            "Panneau d'administration complet avec analytics"
-        ],
+        features: [],
         technologies: [
             "PHP", "MySQL"
-        ],
-        challenges: [
-            "Développement d'un framework MVC léger et sur mesure",
-            "Mise en place d'un système de cache efficace pour gérer le trafic",
-            "Implémentation d'un algorithme de recommandation personnalisé",
-            "Sécurisation complète contre les vulnérabilités web courantes"
-        ],
-        outcomes: [
-            "Communauté de plus de 5 000 utilisateurs actifs",
-            "Temps de chargement moyen des pages inférieur à 1.5 secondes",
-            "Réduction de 60% de la consommation de bande passante par rapport aux solutions existantes",
-            "Zéro incident de sécurité depuis le lancement il y a 18 mois"
         ]
     },
     {
@@ -153,58 +107,31 @@ export default [
         link: "https://www.cats-btp.fr/",
         github: "",
         features: [
-            "Showcase interactif des projets terminés avec filtres de catégories",
-            "Formulaire de devis intelligent avec estimation préliminaire",
-            "Témoignages clients vérifiés avec système de notation",
-            "Intégration de Google Maps pour visualiser les zones d'intervention",
-            "Blog technique sur les innovations dans le BTP"
         ],
         technologies: [
-            "HTML5", "CSS3", "JavaScript", "PHP", "MySQL", "Google Maps API", "Analytics", "Optimisation SEO"
+            "HTML5", "Tailwind"
         ],
         challenges: [
-            "Création d'un design moderne tout en respectant l'identité traditionnelle de l'entreprise",
-            "Optimisation des images de chantiers pour maintenir la qualité visuelle sans sacrifier les performances",
-            "Implémentation d'un système de filtre efficace pour le portfolio de projets",
-            "Amélioration du référencement local pour cibler la clientèle régionale"
         ],
         outcomes: [
-            "Augmentation de 150% des demandes de devis en ligne",
-            "Amélioration du positionnement Google pour 15 mots-clés stratégiques",
-            "Réduction du taux de rebond de 65% à 28%",
-            "Score PageSpeed Insights de 92/100 sur mobile et 96/100 sur desktop"
-        ]
+            "Augmentation de 30% du trafic organique en 6 mois",]
     },
     {
         id: 7,
         title: "Application mobile en React Native",
-        description: "Création d'une application mobile en React Native type google keep.",
+        description: "Création d'une application mobile en React Native type google keep. (en cours de développement)",
         longDescription: "Cette application de prise de notes inspirée par Google Keep combine simplicité d'utilisation et fonctionnalités avancées. Développée avec React Native pour une expérience native sur iOS et Android, elle se synchronise en temps réel via Firebase et fonctionne également hors ligne grâce à un système de mise en cache intelligent. L'application propose des fonctionnalités d'organisation avancées comme les tags, le code couleur, les rappels géolocalisés et la reconnaissance vocale pour la création rapide de notes.",
         image: "/975TcgONQd6XMHJYVNgZDw.jpeg?height=600&width=800",
         tags: ["React Native", "TypeScript", "Expo"],
         link: "",
         github: "",
         features: [
-            "Synchronisation cross-device en temps réel",
-            "Système de rappels intelligents basés sur l'emplacement et l'heure",
-            "Reconnaissance vocale et transcription automatique",
             "Mode sombre et personnalisation de l'interface",
             "Organisation par tags, couleurs et collections"
         ],
         technologies: [
             "React Native", "Expo", "TypeScript"
         ],
-        challenges: [
-            "Implémentation d'un système de synchronisation robuste fonctionnant même avec connexion intermittente",
-            "Optimisation de la consommation de batterie pour les fonctionnalités en arrière-plan",
-            "Création d'une interface fluide avec animations sans sacrifier les performances",
-            "Développement d'une architecture permettant l'ajout facile de nouvelles fonctionnalités"
-        ],
-        outcomes: [
-            "Plus de 25 000 téléchargements sur l'App Store et Google Play",
-            "Note moyenne de 4.7/5 étoiles basée sur 500+ avis",
-            "Featured dans la section \"Apps de productivité\" sur l'App Store",
-            "Temps moyen passé dans l'application de 12 minutes par session"
-        ]
+        outcomes: []
     }
 ]
