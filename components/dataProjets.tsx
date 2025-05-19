@@ -22,8 +22,8 @@ export default [
         longDescription: "Encrypt est une application web de chiffrement de bout en bout qui permet aux utilisateurs de sécuriser leurs messages sensibles. Utilisant des algorithmes de cryptographie modernes (AES-256), l'application génère des messages chiffrés qui ne peuvent être déchiffrés qu'avec le mot de passe correct. Aucune donnée n'est stockée sur le serveur, garantissant ainsi une confidentialité totale et un respect de la vie privée des utilisateurs.",
         image: "/x06zx7JRRPKIpzSPfYXafA.webp?height=600&width=800",
         tags: ["HTML/CSS", "JavaScript", "Cryptographie", "Sécurité"],
-        link: "https://guillaume-breon.tech/Encrypt/",
-        github: "",
+        link: "https://guiggzz.github.io/Encrypt/",
+        github: "https://github.com/Guiggzz/Encrypt",
         features: [
             "Cryptage AES-256 avec dérivation de clé sécurisée",
             "Interface minimaliste et intuitive",
@@ -91,7 +91,7 @@ export default [
         image: "/php.png?height=600&width=800",
         tags: ["PHP", "MySQL"],
         link: "",
-        github: "",
+        github: "https://github.com/Guiggzz/instameme",
         features: [],
         technologies: [
             "PHP", "MySQL"
