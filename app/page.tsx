@@ -324,7 +324,7 @@ export default function Home() {
                           Loisirs
                         </h4>
                         <div className="flex flex-wrap gap-2">
-                          {["Scoutisme (8 ans)", "Taekwondo (8 ans)", "Hockey sur glace (7 ans)"].map((hobby) => (
+                          {["Scoutisme (8 ans)", "Maroquinerie (fabrication de sac à main en cuir)", "Hockey sur glace (7 ans)"].map((hobby) => (
                             <span
                               key={hobby}
                               className="px-3 py-1.5 text-sm rounded-full bg-primary/15 text-primary border border-primary/20 hover:bg-primary/25 transition-colors"

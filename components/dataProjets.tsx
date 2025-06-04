@@ -47,11 +47,8 @@ export default [
         link: "",
         github: "",
         features: [
-            "Base de données complète des 898 Pokémon",
             "Filtrage avancé par type, génération et caractéristiques",
-            "Système de favoris personnalisable",
             "Visualisation des chaînes d'évolution",
-            "Mode combat simulé pour comparer les statistiques"
         ],
         technologies: [
             "React", "Axios", "TypeScript"
