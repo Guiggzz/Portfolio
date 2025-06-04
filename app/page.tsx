@@ -46,6 +46,14 @@ export default function Home() {
     document.body.removeChild(link)
   }
 
+  const handleDownloadtab = () => {
+    const link = document.createElement("a")
+    link.href = "/tableau.pdf"
+    link.download = "tableau.pdf"
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
   return (
     <div className="relative min-h-screen bg-black text-white overflow-hidden">
       <div className="absolute inset-0 bg-[radial-gradient(rgba(50,50,50,0.3)_1px,transparent_1px)] bg-[length:30px_30px] opacity-30" />
@@ -587,10 +595,25 @@ export default function Home() {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="py-8 border-t border-primary/20">
+      <footer className="py-8 border-t border-primary/20 bg-black text-white">
         <div className="container mx-auto px-4 text-center">
-          <p className="text-gray-400">© {new Date().getFullYear()} Guillaume Breon. Tous droits réservés.</p>
+          <div className="flex flex-col md:flex-row justify-center items-center space-y-2 md:space-y-0 md:space-x-6">
+            <p className="text-gray-400">© {new Date().getFullYear()} Guillaume Breon. Tous droits réservés.</p>
+            <Link
+              href="/privacy"
+              className="text-gray-400 hover:text-primary transition-colors text-sm relative z-50 cursor-pointer"
+              style={{ pointerEvents: 'auto' }}
+            >
+              Politique de confidentialité
+            </Link>
+            <Link
+              href="#contact"
+              className="text-gray-400 hover:text-primary transition-colors text-sm relative z-50 cursor-pointer"
+              style={{ pointerEvents: 'auto' }} onClick={handleDownloadtab}
+            >
+              Tableau de synthèse
+            </Link>
+          </div>
         </div>
       </footer>
     </div>

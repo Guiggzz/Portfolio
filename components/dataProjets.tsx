@@ -45,7 +45,7 @@ export default [
         image: "/image.png?height=600&width=800",
         tags: ["React", "Axios", "TypeScript"],
         link: "",
-        github: "",
+        github: "https://github.com/Guiggzz/Poke",
         features: [
             "Filtrage avancé par type, génération et caractéristiques",
             "Visualisation des chaînes d'évolution",
@@ -110,18 +110,17 @@ export default [
         ],
         challenges: [
         ],
-        outcomes: [
-            "Augmentation de 30% du trafic organique en 6 mois",]
+        outcomes: []
     },
     {
         id: 7,
         title: "Application mobile en React Native",
-        description: "Création d'une application mobile en React Native type google keep. (en cours de développement)",
+        description: "Création d'une application mobile en React Native type google keep.",
         longDescription: "Cette application de prise de notes inspirée par Google Keep combine simplicité d'utilisation et fonctionnalités avancées. Développée avec React Native pour une expérience native sur iOS et Android, elle se synchronise en temps réel via Firebase et fonctionne également hors ligne grâce à un système de mise en cache intelligent. L'application propose des fonctionnalités d'organisation avancées comme les tags, le code couleur, les rappels géolocalisés et la reconnaissance vocale pour la création rapide de notes.",
         image: "/975TcgONQd6XMHJYVNgZDw.jpeg?height=600&width=800",
         tags: ["React Native", "TypeScript", "Expo"],
         link: "",
-        github: "",
+        github: "https://github.com/Guiggzz/LappliDeKevinCestUnGoogleKeepEnMoinsBien.git",
         features: [
             "Mode sombre et personnalisation de l'interface",
             "Organisation par tags, couleurs et collections"
